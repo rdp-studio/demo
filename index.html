@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <meta name="Demo" content="Demo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- This is only needed for GitHub pages. -->
+    <script src="coi-serviceworker.min.js"></script>
+  <script defer src="draw.js"></script></head>
+  <body> 
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #494949;
+        color: white;
+      }
+      #container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #inner-container {
+        margin-top: 2rem;
+        display: inline-block;
+        width: 85%;
+        min-height: 500px;
+        border: 1px solid white;
+        padding: 1rem;
+      }
+      #logs-container {
+        display: flex;
+      }
+      #logs {
+        padding: 1rem;
+        min-width: 30rem;
+      }
+      h3 {
+        margin-top: 0px;
+        margin-bottom: 2px;
+      }
+      .pose-image {
+        width: 100px;
+      }
+      a {
+        color: #92D1FF;
+      }
+    </style>
+
+    <div id="container">
+      <div id="inner-container">
+        <h1 >Demo</h1>
+        <div id="hint-container">
+          <div id="hint">
+            <ul>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div id="canvas-container">
+          <div id="canvas">
+          </div>
+        </div>
+        <div id="logs-container">
+          <div id="logs">
+            <div id="mobile" style="display: none; color: red;"></div>
+            <div>加载模型: <span id="progress">0%</span></div>
+            <div id="warmup" style="display: none;">预处理...</div>
+            <div id="camera" style="display: none;">请求摄像头...</div>
+            <div id="error"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
